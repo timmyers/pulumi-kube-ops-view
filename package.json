@@ -1,0 +1,43 @@
+{
+  "name": "@timmyers/pulumi-kube-ops-view",
+  "version": "0.0.0-development",
+  "main": "bin/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@pulumi/kubernetes": "^0.25.2",
+    "@pulumi/pulumi": "^0.17.27",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "PULUMI_TEST_MODE=true PULUMI_NODEJS_STACK=test PULUMI_NODEJS_PROJECT=test jest --coverage",
+    "coverage": "codecov",
+    "semantic-release": "semantic-release",
+    "commit": "git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timmyers/pulumi-kube-ops-view.git"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.16",
+    "codecov": "^3.5.0",
+    "cz-conventional-changelog": "^3.0.2",
+    "jest": "^24.8.0",
+    "semantic-release": "^15.13.19"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": [
+    "pulumi",
+    "kubernetes",
+    "kube-ops-view",
+    "cloud-native",
+    "infrastructure-as-code"
+  ]
+}
