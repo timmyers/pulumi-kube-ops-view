@@ -6,5 +6,5 @@ update_configs:
     update_schedule: live
 
   - package_manager: docker
-    directory: /.github/action/
+    directory: /.github/actions/main
     update_schedule: daily

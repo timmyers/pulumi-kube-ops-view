@@ -2,7 +2,7 @@ import * as pulumi from '@pulumi/pulumi';
 import * as k8s from '@pulumi/kubernetes';
 import * as kubeTypes from '@pulumi/kubernetes/types/input'
 import { CustomResourceOptions } from '@pulumi/pulumi';
-import K8sMetricsServer from '@timmyers/pulumi-k8s-metrics-server';
+import MetricsServer from '@timmyers/pulumi-k8s-metrics-server';
 import Deployment from './deployment';
 // import Service from './service';
 import Rbac from './rbac';
@@ -75,8 +75,8 @@ const defaults = (args: MetricsServerArgs): MetricsServerArgs => {
 }
 
 export default class KubeOpsView extends pulumi.ComponentResource {
+  public metricsServer: undefined | MetricsServer;
   public deployment: k8s.apps.v1.Deployment;
-  public podDisruptionBudget: undefined | k8s.policy.v1beta1.PodDisruptionBudget;
   public service: k8s.core.v1.Service;
   public apiService: undefined | k8s.apiregistration.v1beta1.APIService;
   public serviceAccount: undefined | k8s.core.v1.ServiceAccount;
@@ -89,8 +89,9 @@ export default class KubeOpsView extends pulumi.ComponentResource {
     const args = defaults(argsIn);
     const { namespace, createMetricsServer, rbac } = args;
 
+    this.metricsServer = undefined;
     if (args.createMetricsServer)  {
-      const metricsServer = new K8sMetricsServer(name, {}, defaultOptions);
+      this.metricsServer = new MetricsServer(name, {}, defaultOptions);
     }
 
     let rbacResource: Rbac|undefined = undefined;
@@ -131,6 +132,7 @@ export default class KubeOpsView extends pulumi.ComponentResource {
     this.clusterRole = rbacResource ? rbacResource.clusterRole : undefined;
 
     this.registerOutputs({
+      metricsServer: this.metricsServer,
       deployment: this.deployment,
       serviceAccount: this.serviceAccount,
       clusterRole: this.clusterRole,
