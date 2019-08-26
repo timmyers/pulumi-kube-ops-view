@@ -3,6 +3,7 @@ import * as pulumi from '@pulumi/pulumi';
 import * as kubeTypes from '@pulumi/kubernetes/types/input'
 
 export interface RbacArgs {
+  namespace?: string;
 }
 
 export default class Rbac extends pulumi.ComponentResource {

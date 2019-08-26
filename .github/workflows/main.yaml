@@ -18,7 +18,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Build the stack
-        run: docker-compose up -d
-      - name: Test for file
-        run: cat kubeconfig.yaml
+      - name: Run integration tests
+        run: docker-compose run test
