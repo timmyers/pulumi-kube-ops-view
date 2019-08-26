@@ -112,9 +112,6 @@ export default class KubeOpsView extends pulumi.ComponentResource {
         tag: args.image.tag,
         pullPolicy: args.image.pullPolicy,
       },
-      livenessProbe: args.livenessProbe,
-      readinessProbe: args.readinessProbe,
-      podDisruptionBudget: args.podDisruptionBudget,
     }, defaultOptions);
 
     // const service = new Service(name, {

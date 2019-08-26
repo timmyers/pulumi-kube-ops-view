@@ -29,7 +29,7 @@ export default class Deployment extends pulumi.ComponentResource {
 
     const defaultOptions: pulumi.CustomResourceOptions = { parent: this };
     const { namespace, replicas, annotations, serviceAccountName, 
-            securityContext, image, podDisruptionBudget} = args;
+            securityContext, image } = args;
     const labels = { app: name };
     const port = 8080;
     const probe: kubeTypes.core.v1.Probe = { httpGet: { path: '/health', port } };
