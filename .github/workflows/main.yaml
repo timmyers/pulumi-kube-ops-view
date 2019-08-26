@@ -15,6 +15,9 @@ jobs:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   integration:
+    steps:
+      - name: First
+        run: which k3s
     services:
       k3s:
         image: rancher/k3s:v0.8.1
