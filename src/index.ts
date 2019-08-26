@@ -2,13 +2,14 @@ import * as pulumi from '@pulumi/pulumi';
 import * as k8s from '@pulumi/kubernetes';
 import * as kubeTypes from '@pulumi/kubernetes/types/input'
 import { CustomResourceOptions } from '@pulumi/pulumi';
-import Deployment,  {PodDisruptionBudgetArgs } from './deployment';
-import Service from './service';
+import K8sMetricsServer from '@timmyers/pulumi-k8s-metrics-server';
+import Deployment from './deployment';
+// import Service from './service';
 import Rbac from './rbac';
-import Psp from './psp';
 
 export interface MetricsServerArgs {
   namespace?: string;
+  createMetricsServer?: boolean;
   rbac?: boolean; // Enable Role-based authentication
   apiService?: {
     create?: boolean;
@@ -30,6 +31,10 @@ export interface MetricsServerArgs {
 const defaults = (args: MetricsServerArgs): MetricsServerArgs => {
   if (args.namespace === undefined) {
     args.namespace = 'kube-system';
+  }
+
+  if (args.createMetricsServer === undefined) {
+    args.createMetricsServer = true;
   }
 
   if (args.rbac === undefined) {
@@ -82,7 +87,11 @@ export default class KubeOpsView extends pulumi.ComponentResource {
 
     const defaultOptions: CustomResourceOptions = { parent: this };
     const args = defaults(argsIn);
-    const { namespace, rbac } = args;
+    const { namespace, createMetricsServer, rbac } = args;
+
+    if (args.createMetricsServer)  {
+      const metricsServer = new K8sMetricsServer(name, {}, defaultOptions);
+    }
 
     let rbacResource: Rbac|undefined = undefined;
     if (rbac) {

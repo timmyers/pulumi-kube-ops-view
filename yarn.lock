@@ -1056,6 +1056,22 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
+"@pulumi/kubernetes@^0.25.2":
+  version "0.25.6"
+  resolved "https://registry.yarnpkg.com/@pulumi/kubernetes/-/kubernetes-0.25.6.tgz#524f0bd3d77ed2804ff34ae375f8670e619a41d7"
+  integrity sha512-h0RH1SRu/wsaYd0Dj9ZW3T0Zzrs0rM3QCbG/0+JtyfOeEWEWyPkFmU3XIr5kMEiVTMpjO0jv/ZFlvHDfusY0og==
+  dependencies:
+    "@pulumi/pulumi" "^0.17.18"
+    "@types/glob" "^5.0.35"
+    "@types/js-yaml" "^3.11.2"
+    "@types/node-fetch" "^2.1.4"
+    "@types/tmp" "^0.0.33"
+    glob "^7.1.2"
+    js-yaml "^3.12.0"
+    node-fetch "^2.3.0"
+    shell-quote "^1.6.1"
+    tmp "^0.0.33"
+
 "@pulumi/kubernetes@^1.0.0-beta.1":
   version "1.0.0-beta.1"
   resolved "https://registry.yarnpkg.com/@pulumi/kubernetes/-/kubernetes-1.0.0-beta.1.tgz#3b1348caa168e3b7601a540390452b06085904da"
@@ -1071,6 +1087,26 @@
     node-fetch "^2.3.0"
     shell-quote "^1.6.1"
     tmp "^0.0.33"
+
+"@pulumi/pulumi@^0.17.18", "@pulumi/pulumi@^0.17.25":
+  version "0.17.28"
+  resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-0.17.28.tgz#26f27c0075685b98647263565bfe8bb12adc0542"
+  integrity sha512-pVKahH9Ryl6wIpzdOKjsu2gEshDCA7elB34paJpPXw+3ARViSPri7y/2uTdmMRg36jsbrOdNGEohKJEqIZLioA==
+  dependencies:
+    "@pulumi/query" "^0.3.0"
+    deasync "^0.1.15"
+    google-protobuf "^3.5.0"
+    grpc "1.21.1"
+    minimist "^1.2.0"
+    normalize-package-data "^2.4.0"
+    protobufjs "^6.8.6"
+    read-package-tree "^5.3.1"
+    require-from-string "^2.0.1"
+    semver "^6.1.0"
+    source-map-support "^0.4.16"
+    ts-node "^7.0.0"
+    typescript "^3.0.0"
+    upath "^1.1.0"
 
 "@pulumi/pulumi@^1.0.0-beta", "@pulumi/pulumi@^1.0.0-beta.4":
   version "1.0.0-beta.4"
@@ -1169,6 +1205,15 @@
     into-stream "^5.0.0"
     lodash "^4.17.4"
     read-pkg-up "^6.0.0"
+
+"@timmyers/pulumi-k8s-metrics-server@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@timmyers/pulumi-k8s-metrics-server/-/pulumi-k8s-metrics-server-1.5.1.tgz#88312dd0f444487216e8a996085566311773dbe8"
+  integrity sha512-ZdrwYz2CXd2BZG2KP4pId6iWRa4hwAfe77nCpGyYMF7Cf/7e/SN1O0kLV8lple2hTWl/i25DnWdOSzYncNv09g==
+  dependencies:
+    "@pulumi/kubernetes" "^0.25.2"
+    "@pulumi/pulumi" "^0.17.25"
+    typescript "^3.5.3"
 
 "@types/babel__core@^7.1.0":
   version "7.1.2"
