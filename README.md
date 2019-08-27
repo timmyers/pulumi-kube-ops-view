@@ -1,6 +1,5 @@
 <h1 align="center">🍹📈 pulumi-kube-ops-view</h1>
 
-[![Actions Status](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/timmyers/pulumi-kube-ops-view)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/timmyers/pulumi-kube-ops-view)
 [![npm](https://img.shields.io/npm/v/@timmyers/pulumi-kube-ops-view.svg?style=popout)](https://www.npmjs.com/package/@timmyers/pulumi-kube-ops-view)
 [![codecov](https://codecov.io/gh/timmyers/pulumi-kube-ops-view/branch/master/graph/badge.svg)](https://codecov.io/gh/timmyers/pulumi-kube-ops-view)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
