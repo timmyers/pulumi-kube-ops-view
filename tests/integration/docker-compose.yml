@@ -10,7 +10,7 @@ services:
     volumes:
       - k3s-server:/var/lib/rancher/k3s
       # This is just so that we get the kubeconfig file out
-      - k3s-config:/output
+      - .:/output
     ports:
       - 6443:6443
 
@@ -24,15 +24,15 @@ services:
       - K3S_URL=https://server:6443
       - K3S_CLUSTER_SECRET=somethingtotallyrandom
 
-  test:
-    build:
-      context: .
-      dockerfile: tests/integration/Dockerfile
-    depends_on:
-      - server
-      - node
-    volumes:
-      - k3s-config:/kubeconfig
+  # test:
+  #   build:
+  #     context: .
+  #     dockerfile: tests/integration/Dockerfile
+  #   depends_on:
+  #     - server
+  #     - node
+  #   volumes:
+  #     - k3s-config:/kubeconfig
 
 volumes:
   k3s-config: {}
