@@ -3,7 +3,7 @@ name: CI
 on: [push]
 
 jobs:
-  build:
+  Build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
@@ -14,7 +14,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-  integration:
+  Integration:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master

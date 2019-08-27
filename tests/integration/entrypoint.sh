@@ -6,4 +6,5 @@ export KUBECONFIG=/kubeconfig/kubeconfig.yaml
 
 pulumi login --local
 pulumi stack init test || pulumi stack select test
-pulumi up -y --skip-preview
+pulumi preview
+# pulumi up -y --skip-preview
