@@ -7,7 +7,7 @@
   "dependencies": {
     "@pulumi/kubernetes": "^1.0.0-beta.1",
     "@pulumi/pulumi": "^1.0.0-beta.4",
-    "@timmyers/pulumi-k8s-metrics-server": "^1.5.1",
+    "@timmyers/pulumi-k8s-metrics-server": "^1.6.0",
     "typescript": "^3.5.3"
   },
   "scripts": {
