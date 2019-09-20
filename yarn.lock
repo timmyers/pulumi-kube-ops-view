@@ -1039,7 +1039,7 @@
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
   integrity sha1-p3c2C1s5oaLlEG+OhY8v0tBgxXA=
 
-"@pulumi/kubernetes@^1.0.0-beta.1", "@pulumi/kubernetes@^1.1.0":
+"@pulumi/kubernetes@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@pulumi/kubernetes/-/kubernetes-1.1.0.tgz#130e6c91c7da9678f28fc89123d5a2a80730cf23"
   integrity sha512-YqEgmpYVKF8D0k54/Hy4Sad76fnpDv+MDbw81zV2HNz7l4mViSXzEwZmTfY+nbXysh/zYpiqK12A621AsW17Lg==
@@ -1055,7 +1055,7 @@
     shell-quote "^1.6.1"
     tmp "^0.0.33"
 
-"@pulumi/pulumi@^1.0.0", "@pulumi/pulumi@^1.0.0-beta.4", "@pulumi/pulumi@^1.1.0":
+"@pulumi/pulumi@^1.0.0", "@pulumi/pulumi@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@pulumi/pulumi/-/pulumi-1.1.0.tgz#d7eb3953206ff25b950069ad325493b9d90256de"
   integrity sha512-onVOAKo2H1WgyT6v1053CrHNjpoCbyj7Pq4DYORk7Uc6cTFGkI7wJhs7dUDVLlx+RUXSxIo+q4oAHz7bIVWZNw==
@@ -1153,14 +1153,14 @@
     lodash "^4.17.4"
     read-pkg-up "^6.0.0"
 
-"@timmyers/pulumi-k8s-metrics-server@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@timmyers/pulumi-k8s-metrics-server/-/pulumi-k8s-metrics-server-1.6.0.tgz#0165a3ed2644834670de799c5efaab3979feadb3"
-  integrity sha512-bEzqLJrMNzynoww2RSr56Z+vd8Sh8Owv88YdrtwQRqlsO+8kvn0AXzekahkJaDTw1VtRlN2+SDl6j8pHiZhGbA==
+"@timmyers/pulumi-k8s-metrics-server@^1.6.1":
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/@timmyers/pulumi-k8s-metrics-server/-/pulumi-k8s-metrics-server-1.6.1.tgz#c441f80dc84edfe8203ba7d5868c87145ab8451f"
+  integrity sha512-jyqydb+BIFMSstIi1Ybf7wVdJmg7sPbETDaje+qlPkJg+2kB5nuMmZfcExsCK5w6s2M6Z5zVLoU1r6UOG24jiQ==
   dependencies:
-    "@pulumi/kubernetes" "^1.0.0-beta.1"
-    "@pulumi/pulumi" "^1.0.0-beta.4"
-    typescript "^3.5.3"
+    "@pulumi/kubernetes" "^1.1.0"
+    "@pulumi/pulumi" "^1.1.0"
+    typescript "^3.6.3"
 
 "@types/babel__core@^7.1.0":
   version "7.1.2"
@@ -7569,7 +7569,7 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.0.0, typescript@^3.5.3, typescript@^3.6.3:
+typescript@^3.0.0, typescript@^3.6.3:
   version "3.6.3"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.6.3.tgz#fea942fabb20f7e1ca7164ff626f1a9f3f70b4da"
   integrity sha512-N7bceJL1CtRQ2RiG0AQME13ksR7DiuQh/QehubYcghzv20tnh+MQnQIuJddTmsbqYj+dztchykemz0zFzlvdQw==
