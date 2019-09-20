@@ -1153,10 +1153,10 @@
     lodash "^4.17.4"
     read-pkg-up "^6.0.0"
 
-"@timmyers/pulumi-k8s-metrics-server@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@timmyers/pulumi-k8s-metrics-server/-/pulumi-k8s-metrics-server-1.6.1.tgz#c441f80dc84edfe8203ba7d5868c87145ab8451f"
-  integrity sha512-jyqydb+BIFMSstIi1Ybf7wVdJmg7sPbETDaje+qlPkJg+2kB5nuMmZfcExsCK5w6s2M6Z5zVLoU1r6UOG24jiQ==
+"@timmyers/pulumi-k8s-metrics-server@^1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@timmyers/pulumi-k8s-metrics-server/-/pulumi-k8s-metrics-server-1.6.2.tgz#923b843520db750f5b0cdaae1780a74ebea835fb"
+  integrity sha512-U9u6Ezf6+K2IzVUG1DyouN+5uwXvS/FrPZPWjCpaa73CpYiHcgxFTS+HAY9b7CobtjbsLnfISjCcLqrm3ZbTpw==
   dependencies:
     "@pulumi/kubernetes" "^1.1.0"
     "@pulumi/pulumi" "^1.1.0"
