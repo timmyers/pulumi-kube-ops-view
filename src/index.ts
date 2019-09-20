@@ -51,15 +51,17 @@ const defaults = (args: MetricsServerArgs): MetricsServerArgs => {
   //   args.podDisruptionBudget = { enabled: false };
   // }
 
+  const imageTag = '19.9.0'
+
   if (args.image === undefined) {
     args.image = { 
       repository: 'hjacobs/kube-ops-view',
-      tag: '0.12',
+      tag: imageTag,
       pullPolicy: 'IfNotPresent',
     }
   } else {
     if (args.image.repository === undefined) args.image.repository = 'hjacobs/kube-ops-view';
-    if (args.image.tag === undefined) args.image.tag = '0.12';
+    if (args.image.tag === undefined) args.image.tag = imageTag;
     if (args.image.pullPolicy === undefined) args.image.pullPolicy = 'IfNotPresent';
   }
 
