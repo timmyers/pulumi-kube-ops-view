@@ -1,3 +1,3 @@
-import KubeOpsView, { MetricsServerArgs } from '@timmyers/kube-ops-view';
+import KubeOpsView, { MetricsServerArgs } from '@timmyers/pulumi-kube-ops-view';
 
 const opsView = new KubeOpsView('kube-ops-view', {});
