@@ -22,7 +22,7 @@
     "url": "https://github.com/timmyers/pulumi-kube-ops-view.git"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-env": "^7.12.7",
     "@babel/preset-typescript": "^7.7.2",
     "@types/jest": "^24.0.23",
     "codecov": "^3.6.1",
